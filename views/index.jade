@@ -1,0 +1,118 @@
+extends layout
+-var login;
+-var userid;
+block content
+
+    #main
+        #header
+            #logo
+                h1
+                    simplestyle
+                if login =='로그인'
+                    a(href='/login') #{login}
+                    | |
+                    a(href='/register') 회원가입
+                    |     #{userid}
+                    .slogan Ajou Used Book Auction System
+                else if login=='로그아웃'
+                    a(href='/logout') #{login}
+                    | |
+                    a(href='/register') 회원가입
+                    |  #{userid}
+                    .slogan Ajou Used Book Auction System
+
+
+            #menubar
+                ul#menu
+                    // put class="current" in the li tag for the selected page - to highlight which page you're on
+                    li.current
+                        a(href='index.jade') Home
+
+                    li
+                        a(href='/topic') Auction
+
+                    li
+                        a(href='/chatlist') My Page
+
+                    li
+                        a(href='Report') Report
+
+                    li
+                        a(href='contact.jade') Contact Us
+
+        #site_content
+            #sidebar_container
+                img.paperclip(src='images/paperclip.png', alt='paperclip')
+
+                .sidebar
+                    // insert your sidebar items here
+                    h3 최근 뉴스
+
+
+
+                    h5 -> 2016/12/5 업데이트
+
+                    p
+                        | 많은 이용자분들께서 요청하신 소프트웨어학과의 전공서적이 5권 추가되었습니다.
+                        br
+                        a(href='#') Read more
+
+                img.paperclip(src='images/paperclip.png', alt='paperclip')
+
+                .sidebar
+                    h2 불법사용자 신고
+
+
+                    h5 참고하세요 !!
+
+                    p
+                        | 불법이용자에 대한 신고는 'Report' 탭을 이용해서 진행하실 수 있습니다.
+                    p
+                        | 다른 용무의 건의사항은 다음에 나오는 텍스트창에 기입하여 보내주십시오.
+
+                    form#subscribe(method='post', action='#')
+                        p(style='padding: 0 0 9px 0;')
+                            input.search(type='text', name='email_address', value='write proposal ', onclick="javascript: document.forms['subscribe'].email_address.value=''")
+
+                        p
+                            input.subscribe(name='subscribe', type='submit', value='Subscribe')
+
+                img.paperclip(src='images/paperclip.png', alt='paperclip')
+
+                .sidebar
+                    h3 알림
+
+
+
+                    p
+                        | 본 사이트에 처음이신 고객은 회원가입을 하신 후 'Auction' 탭을 누르셔서 경매에 참여하실 수 있습니다.
+                        br
+                        a(href='#') 자세히 보기
+
+            #content
+                // insert the page content here
+                #semilogo Welcome
+                br
+                br
+                br
+                br
+                br
+
+
+                p
+                    a.semititle  아주인을 위한 중고책 거래공간
+
+                .semiimage
+                    img(src='images/books.png')
+
+                p
+                    a.semicontent    더 이상 사용하지 않는 전공서적 판매
+                    br
+                    a.semicontent    가격이 비싸 구입하기 망설여졌던 전공서적 구매
+
+                a.auction_logo  Ajou Used Book Auction &nbsp;
+                a.semicontent    에서 모두 거래하세요!
+
+        #footer
+            p
+                | Web System Project - Ajou Used Book Auction

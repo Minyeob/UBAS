@@ -1,0 +1,376 @@
+extends ../layout
+-var login;
+-var userid;
+block scripts
+  script(src='/routes/function.js')
+block content
+  #main
+    #header
+      #logo
+        h1
+          simplestyle
+        a(href='/login') #{login}
+        | |
+        a(href='/register') 회원가입
+        |     #{userid}
+        .slogan Ajou Used Book Auction System
+
+      #menubar
+        ul#menu
+          // put class="current" in the li tag for the selected page - to highlight which page you're on
+          li
+            a(href='index.jade') Home
+
+          li.current
+            a(href='examples.jade') Buy & Sell
+
+          li
+            a(href='page.jade') My Page
+
+          li
+            a(href='another_page.jade') Another Page
+
+          li
+            a(href='contact.jade') Contact Us
+
+    #site_content
+      #sidebar_container
+        select.form_select(name='city2')
+          option(selected='selected', value='0') All Categories
+
+          option(value='Software') Software
+
+          option(value='Media Tecnlogy') Media Tecnlogy
+
+          option(value='Electronics') Electronics
+
+          option(value='Mechanical Engineering') Mechanical Engineering
+
+          option(value='Mathematics') Mathematics
+
+          option(value='Architecture') Architecture
+
+        input.form_button(type='submit', name='name', value='Search')
+        div.clear
+        a(href='/register')
+          input.button(type='button' , name='register' , value='Register Auction')
+        div.line2
+        div.clear
+        talble2
+          td(align='right')
+            form(name='pfrm', method='get', style='margin:0;', action='/page/sho10.php')
+              input(type='hidden', name='spCate1', value='')
+
+              input(type='hidden', name='spCate2', value='')
+
+              input(type='hidden', name='spCate3', value='')
+
+              input(type='hidden', name='sOrder', value='')
+
+              font(style='color:#767676;') 상품표시
+
+              select.select(name='pageSize', onchange='document.pfrm.submit();')
+                option(value='20', selected='') 20줄씩
+
+                option(value='40') 40줄씩
+
+                option(value='60') 60줄씩
+
+                option(value='80') 80줄씩
+
+
+
+
+
+      #content
+        p
+          form
+            a.slogan2(href='index.jade') AUBAS
+            input.form_input(type='text', name='name', value='' , placeholder="Search.." )
+          div.clear
+          table2(cellpadding='0', cellspacing='0', border='0', width='805', align='center')
+                tr
+                  td
+                    a(href='?spCate1=')
+                      img(src='images/a.png')
+
+                  td
+                    a(href='?sOrder=sell&spCate1=')
+                      img(src='images/auction.png' )
+
+                  td
+                    a(href='?sOrder=popularity&spCate1=')
+                      img(src='images/buyitnow.png')
+          div.line
+          div.clear
+          table2(cellpadding='0', cellspacing='0', border='0', width='805', align='center')
+            tr
+              td(height='25', style='padding:0px 0px 2px 0px;')
+                font(style='color:#767676;')
+                  b
+                    | 총
+                    font(style='color:#FE9519;') 2663
+                  | 개의 상품이 있습니다.
+
+          table#june1C(cellpadding='0', cellspacing='0', border='0', width='805', align='center')
+            tr
+              td.bar1(colspan='5')
+
+            tr
+              th(width='15%') image of goods
+
+              th(width='auto') goods name
+
+              th(width='15%') Currnt bidding price
+
+              th(width='15%') Buy it now price
+
+              th(width='15%') Select Window
+
+            tr
+              td.bar1(colspan='5')
+
+            tr
+              td
+                a(href='/page/sho10.php?mode=view&spIx=4673&spCate1=')
+                  img(src='/images/data&computer.jpg', width='70', height='100', onerror="this.src='images/notimage.png'", style='border:1px solid #d7d7d7;')
+                br
+
+              td(style='text-align:left; padding:0px 0px 0px 50px;')
+                a(href='/page/sho10.php?mode=view&spIx=4673&spCate1=')
+                  font(style='color:#000000') Data & Computer Communication 10th Edition
+                br
+
+                a(href='/page/sho10.php?mode=view&spIx=4673&spCate1=')
+                  font(style='color:#7d7d7d;') William Stalling | Person | 2014
+
+              td
+                font(style='color:#000000;')
+                  b 30,000원
+
+              td
+                font(style='color:#616161;') 42,000원
+
+              td
+                a(href='/makebid01')
+                  img(src='images/makebid.png', width='96', height='26',  style='cursor:pointer')
+                  br
+
+                .clear(style='height:5px;')
+                a(href='/buyitnow01')
+                  img(src='images/buy_itnow.png', width='96', height='26', onclick="getAction(document.dfrm,'list_wish','4673','');", style='cursor:pointer')
+
+            tr
+              td.dot(colspan='5')
+
+            tr
+              td
+                a(href='/page/sho10.php?mode=view&spIx=4672&spCate1=')
+                  img(src='/images/java.jpg', width='70', height='100', onerror="this.src='images/notimage.png'", style='border:1px solid #d7d7d7;')
+                br
+
+              td(style='text-align:left; padding:0px 0px 0px 50px;')
+                a(href='/page/sho10.php?mode=view&spIx=4672&spCate1=')
+                  font(style='color:#000000') Head First Java 5.0 Edition
+                br
+
+                a(href='/page/sho10.php?mode=view&spIx=4672&spCate1=')
+                  font(style='color:#7d7d7d;') Kathy Sierra , Bert Bates | O'REILLY | 2010
+
+              td
+                font(style='color:#000000;')
+                  b 18,000원
+
+              td
+                font(style='color:#616161;') 33,000원
+
+              td
+                a(href='/makebid02')
+                  img(src='images/makebid.png', width='96', height='26', onclick="getAction(document.dfrm,'list_cart','4672','');", style='cursor:pointer')
+                  br
+
+                .clear(style='height:5px;')
+                a(href='/buyitnow01')
+                  img(src='images/buy_itnow.png', width='96', height='26', onclick="getAction(document.dfrm,'list_wish','4672','');", style='cursor:pointer')
+
+            tr
+              td.dot(colspan='5')
+
+            tr
+              td
+                a(href='/page/sho10.php?mode=view&spIx=4671&spCate1=')
+                  img(src='/images/shop/1478767932_SZGe_0_thum.jpg', width='70', height='100', onerror="this.src='images/notimage.png'", style='border:1px solid #d7d7d7;')
+                br
+
+              td(style='text-align:left; padding:0px 0px 0px 50px;')
+                a(href='/page/sho10.php?mode=view&spIx=4671&spCate1=')
+                  font(style='color:#000000') Operation System : Concepts 9th edition
+                br
+
+                a(href='/page/sho10.php?mode=view&spIx=4671&spCate1=')
+                  font(style='color:#7d7d7d;') 조은규,고건,박민규 옮김 | 교보 문고 | 2007
+
+              td
+                font(style='color:#000000;')
+                  b 10,000원
+
+              td
+                font(style='color:#616161;') 15,000원
+
+              td
+                a(href='/makebid03')
+                  img(src='images/makebid.png', width='96', height='26', onclick="getAction(document.dfrm,'list_cart','4671','');", style='cursor:pointer')
+                  br
+
+                .clear(style='height:5px;')
+                a(href='/buyitnow01')
+                  img(src='images/buy_itnow.png', width='96', height='26', onclick="getAction(document.dfrm,'list_wish','4671','');", style='cursor:pointer')
+
+
+
+
+
+
+
+
+
+
+
+        h2 Headings
+
+        p These are the different heading formats:
+
+        h1 Heading 1
+
+        h2 Heading 2
+
+        h3 Heading 3
+
+        h4 Heading 4
+
+        h5 Heading 5
+
+        h6 Heading 6
+
+        h2 Text
+
+        p The following examples show how the text (within '<p></p>' tags) will appear:
+
+        p
+          strong This is an example of bold text
+
+        p
+          i This is an example of italic text
+
+        p
+          a(href='#') This is a hyperlink
+
+        h2 Lists
+
+        p This is an unordered list:
+
+        ul
+          li Item 1
+
+          li Item 2
+
+          li Item 3
+
+          li Item 4
+
+        p This is an ordered list:
+
+        ol
+          li Item 1
+
+          li Item 2
+
+          li Item 3
+
+          li Item 4
+
+        h2 Images
+
+        p images can be placed on the left, in the center or on the right:
+
+        span.left
+          img(src='images/graphic.png', alt='example graphic')
+
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          | incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          | exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          | irure dolor in reprehenderit in voluptate velit esse cillum.
+
+        span.center
+          img(src='images/graphic.png', alt='example graphic')
+
+        span.right
+          img(src='images/graphic.png', alt='example graphic')
+
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          | incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          | exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          | irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          | pariatur.
+
+        h2 Tables
+
+        p Tables should be used to display data and not used for laying out your website:
+
+        table(style='width:100%; border-spacing:0;')
+          tr
+            th Item
+            th Description
+
+          tr
+            td Item 1
+            td Description of Item 1
+
+          tr
+            td Item 2
+            td Description of Item 2
+
+          tr
+            td Item 3
+            td Description of Item 3
+
+          tr
+            td Item 4
+            td Description of Item 4
+
+        h2 Form Elements
+
+        form(action='#', method='post')
+          .form_settings
+            p
+              span Form field example
+              input(type='text', name='name', value='')
+
+            p
+              span Textarea example
+              textarea(rows='8', cols='50', name='name')
+
+            p
+              span Checkbox example
+              input.checkbox(type='checkbox', name='name', value='')
+
+            p
+              span Dropdown list example
+              select#id(name='name')
+                option(value='1') Example 1
+                option(value='2') Example 2
+
+            p(style='padding-top: 15px')
+              span  
+              input.submit(type='submit', name='name', value='button')
+
+    #footer
+      p
+        | Copyright © simplestyle_8 |
+        a(href='http://validator.w3.org/check?uri=referer') HTML5
+        |  |
+        a(href='http://jigsaw.w3.org/css-validator/check/referer') CSS
+        |  |
+        a(href='http://www.html5webtemplates.co.uk') design from HTML5webtemplates.co.uk

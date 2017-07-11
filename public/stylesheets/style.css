@@ -1,0 +1,689 @@
+html
+{ height: 100%;}
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+.nbs {font-family: 'Nanum Brush Script';}
+*
+{ margin: 0;
+  padding: 0;}
+
+body
+{ font: normal .80em 'trebuchet ms', arial, sans-serif;
+  background: #F7F7F7 url(pattern.png) fixed;
+  color: #fff;
+
+
+ }
+
+p
+{ padding: 0 0 20px 0;
+  line-height: 1.5em;
+  font-size: 107%;}
+
+img
+{ border: 0;}
+
+h1, h2, h3, h4, h5, h6 
+{ font: normal 250% 'Yanone Kaffeesatz', arial, sans-serif;
+  color: #FFF;
+  margin: 0 0 15px 0;
+  padding: 5px 0 5px 0;}
+
+h2
+{ font: normal 170% 'Yanone Kaffeesatz', arial, sans-serif;
+  color: #FFF;  
+  margin: 0;
+  padding: 0 0 8px 0;}
+
+h3
+{ font-size: 200%;
+  margin: 0 0 9px 0;
+  color: #FFF;}
+
+h4, h5, h6
+{ margin: 0;
+  padding: 0 0 5px 0;
+  font: normal 100% arial, sans-serif;
+  color: #FFF;
+  line-height: 1em;}
+
+h5, h6
+{ font: italic 95% arial, sans-serif;
+  color: #888;
+  padding-bottom: 15px;}
+
+h6
+{ color: #FFF;}
+
+a, a:hover
+{ outline: none;
+  text-decoration: none;
+  color: #35BDF5;}
+
+a:hover
+{ text-decoration: underline;}
+
+.left
+{ float: left;
+  width: auto;
+  margin-right: 10px;}
+
+.right
+{ float: right; 
+  width: auto;
+  margin-left: 10px;}
+
+.center
+{ display: block;
+  text-align: center;
+  margin: 20px auto;}
+
+ul
+{ margin: 2px 0 22px 17px;}
+
+ul li
+{ list-style-type: circle;
+  margin: 0 0 0 0; 
+  padding: 0 0 4px 5px;}
+
+ol
+{ margin: 8px 0 22px 20px;}
+
+ol li
+{ margin: 0 0 11px 0;}
+
+#main, #header, #logo, #menubar, #site_content, #footer
+{ margin-left: auto;
+  margin-right: auto;}
+
+#main
+{ width: 950px;
+  margin: 20px auto;}
+
+#header
+{ width: 952px;
+  height: 145px;}
+
+#logo
+{ width: 950px;
+  float: left;
+  height: 100px;
+  background: transparent;
+  padding: 0 0 0px 10px;}
+
+#logo h1
+{ font: normal 350% 'Yanone Kaffeesatz', arial, sans-serif;
+  padding: 5px 0 0 17px;
+  color: #FFF;
+  float: left;}
+
+#logo h1 a
+{ color: #35BDF5;
+  text-decoration: none;}
+
+#logo h1 a:hover
+{ color: #555;
+  text-decoration: none;}
+
+.slogan
+{ float: right; 
+  padding-right: 25px;
+  text-align: right; 
+  font: 500% 'tangerine', arial; 
+  color: #23f1b5;}
+.slogan2
+{
+  float : left;
+  padding-right: 25px;
+  text-align: right;
+  font: 500% 'tangerine', arial;
+  margin-left : -15px;
+  color: 	#80E12A;}
+#menubar
+{ height: 46px;
+  width: 700px;
+  margin: 0px auto -1px auto;
+  float: right;
+  padding: 0px 0 0 0;} 
+
+ul#menu
+{ float: right;}
+
+ul#menu li
+{ float: left;
+  padding: 0 0 0px 0px;
+  list-style: none;
+  margin: 2px 0 0 0;
+  background: transparent;}
+
+ul#menu li a
+{ font: normal 170% 'Yanone Kaffeesatz', sans-serif;
+  text-decoration: none;
+  color: #FFF;
+  display: block; 
+  float: left; 
+  height: 20px;
+  padding: 7px 23px 15px 23px;
+  text-align: center;} 
+
+ul#menu li.current a
+{ height: 20px;
+  padding: 6px 22px 15px 22px;}
+
+ul#menu li.current a
+{ background: transparent url(transparent.png) repeat;
+  border: 1px solid #000;
+  border-bottom: 0;
+  color: #F14E23;}
+
+ul#menu li a:hover
+{ color: #F14E23;}
+
+#site_content
+{ width: 950px;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  padding: 0;
+  background: transparent url(transparent.png) repeat;
+  border: 1px solid #000;} 
+
+#sidebar_container
+{ float: right;
+  width: 250px;
+  margin: 25px 0;}
+
+.sidebar
+{ float: right;
+  width: 200px;
+  margin: 0 24px 27px 0;
+  background: #1d1d1d;
+  border: 1px solid #000;
+  padding: 0 15px 15px 15px;}
+
+.sidebar h3, .content h1
+{ padding: 10px 15px;
+  margin: 0 1px;}
+
+.sidebar h1
+{ padding: 5px 0 0 0;}
+
+.paperclip
+{ float: left;
+  position: relative; 
+  z-index: 0;
+  vertical-align: middle; 
+  margin: -27px 0 -60px -30px;}
+
+.aubus{
+float: left;
+  position: relative;
+
+}
+#content
+{ text-align: left;
+  width: 630px;
+  padding: 25px 0 5px 25px;
+  margin: 0;}
+
+#content ul
+{ margin: 2px 0 22px 0px;}
+
+#content ul li
+{ list-style-type: none;
+  background: url(bullet.png) no-repeat;
+  margin: 0 0 6px 0; 
+  padding: 0 0 4px 25px;
+  line-height: 1.5em;}
+
+#footer
+{ clear: both;
+  width: 100%;
+  font: normal 150% 'yanone kaffeesatz',  arial, sans-serif;
+  height: 85px;
+  padding: 20px 0 5px 0;
+  text-align: center; 
+  color: #FFF;
+  background: transparent;
+  margin-bottom: 20px;}
+
+#footer p
+{ padding: 0 0 10px 0;}
+
+#footer a, #footer a:hover
+{ color: #FFF;
+  text-decoration: none;}
+
+#footer a:hover
+{ color: #35BDF5;
+  text-decoration: none;}
+
+.gallery img
+{ position:absolute;}
+
+.form_settings
+{ margin: 5px 0 0 0;}
+
+.form_settings p
+{ padding: 0 0 10px 0;}
+
+.form_settings span
+{ padding: 5px 0; 
+  float: left; 
+  width: 170px; 
+  text-align: left;}
+  
+.form_settings input, .form_settings textarea
+{ width: 252px;
+  font: 100% 'trebuchet ms', arial;
+  border: 0;
+  border: 1px solid #eee;
+  padding: 5px 10px;
+  background: #fff;
+  color: #FFF;}
+  
+.form_settings .submit
+{ border: 0; 
+  width: auto;
+  margin: 0 0 0 200px; 
+  cursor: pointer; 
+  color: #35BDF5;
+  border: 1px solid #ddd;
+  padding: 5px 15px;
+  background: #fff;
+  font: normal 140% 'Yanone Kaffeesatz', sans-serif;}
+
+.form_settings textarea, .form_settings select
+{ font: 100% 'trebuchet ms', arial; 
+  border: 1px solid #eee;
+  padding: 5px 10px;
+  background: #fff;
+  width: 252px;
+  overflow: auto;}
+
+.form_settings select
+{ width: 274px;}
+
+.form_settings .checkbox
+{ margin: 4px 0; 
+  padding: 0; 
+  width: 14px;
+  border: 0;
+  background: none;}
+
+.form_input{
+ width : 50%;
+  padding : 10px;
+  border : 3px solid #3B94D6;
+  width : 330px;
+  height: 24px;
+  background-image: url('search.png');
+  background-repeat: no-repeat;
+  background-position: -20px -20px;
+  border-radius:4px;
+  margin-left: 16px;
+  margin-top : 5px;
+
+}
+.form_select{
+  width : 160px;
+  height: 50px;
+  padding: 10px;
+  border : 3px solid #3B94D6;
+  margin-top : 25px;
+  margin-left : -47px;
+}
+
+.form_button{
+  width: 100px;
+  height: 50px;
+  margin-left: 10px;
+  border : 3px solid #3B94D6;
+  background-color: #008CBA;
+  color : white;
+  font-size : 15px;
+  cursor: pointer;
+}
+.clear{
+  height:20px;
+}
+.sel{
+  width : 160px;
+  height: 50px;
+  padding: 10px;
+  border : 3px solid #3B94D6;
+}
+.sel2{
+  width : 300px;
+  height: 50px;
+  padding: 10px;
+  border : 2px solid #d99d38;
+}
+.sel3{
+  color: #35BDF5;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  background: #fff;
+  cursor: pointer;
+  margin: 0;
+  font: normal 140% 'Yanone Kaffeesatz', sans-serif;
+}
+.bord {
+  border-bottom: 2px solid #bcbcbc;
+}
+.search
+{ color: #666;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 10px 5px;
+  width: 189px;
+  color: #F14E23;}
+  
+.subscribe
+{ color: #35BDF5;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  background: #fff;
+  float: right;
+  cursor: pointer;
+  margin: 0;
+  font: normal 140% 'Yanone Kaffeesatz', sans-serif;
+}
+ 
+table
+{ margin: 10px 0 30px 0;}
+
+table tr th, table tr td
+{ background: #F5F5F5;
+  color: #111;
+  padding: 7px 4px;
+  text-align: left;}
+  
+table tr td
+{ background: #FBFBFB;
+  color: #111;
+  border-top: 1px solid #FFF;}
+
+table2{
+
+}
+
+.select{
+  margin-left:15px;
+}
+
+.line{
+  border-bottom:1px solid white;
+}
+.line2{
+  height:5px;
+  border-bottom:1px solid white;
+  margin-left:-46px;
+}
+
+#june1C th{
+  backgroun-color: #f2f2f2;
+  padding: 8px 0px 8px 0px;
+  color: #2c2c2c;
+  text-align:center
+
+}
+
+#june1C td{
+ text-align:center
+
+}
+.bar1{
+  background-color: #DCD8D6;
+  height : 1px;
+  padding: 0px;
+}
+
+.button{
+  width: 120px;
+  height: 50px;
+  margin-left: 750px;
+  margin-top: -50px;
+  border : 3px solid  snow ;
+  background-color: #F5DEB3;
+  color :#900;
+  font-size : 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*         로그인관련                    */
+
+.frame{
+  display:inline-block;
+  width:100px;
+}
+
+#framebox{
+  border: solid 5px green;
+  width:300px;
+  background-color: greenyellow;
+  padding: 15px;
+}
+
+.loginForm{position:relative;width:435px}
+.loginForm .box{width:326px}
+.loginForm .box .iText{width:300px;margin:3px 0;padding:10px 12px;border:1px solid #e1e1e1}
+.loginForm .box p{margin-top:1em}
+.loginForm .box p span,
+.loginForm .box p input{height:18px;font-size:11px;color:#737373;line-height:18px;vertical-align:middle}
+.loginForm .loginBtn{display:block;position:absolute;top:0;right:0;width:80px;height:84px;padding:10px;border-radius:5px;
+
+  font-size:14px;font-weight:700;color:#fff;line-height:60px;text-align:center;text-shadow:1px 1px 1px #004773;background:#333}
+
+
+/*---------------------------------------*/
+
+
+/*         채팅 관련                    */
+#chatframe{
+  width:350px;
+  height:250px;
+  text-align:center;
+  padding:10px;
+}
+#chatwho{
+  text-align:center;
+  color: darkslategray;
+  width:150%;
+  height:30%;
+  background-color: powderblue;
+  margin:0 auto;
+  padding-left:5px;
+  border: solid darkcyan 3px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+#chatview{
+  text-align:left;
+  width:150%;
+  height:200%;
+  overflow: auto;
+  background-color: #00B7FF;
+  margin:0 auto;
+  padding-left:5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  /*word-break:break-all;*/
+}
+#chatinput{
+  display: block;
+}
+#chatmsg{
+  width:307px;
+}
+
+#chatListFrame{
+  text-align:center;
+  width:540px;
+  border-top:solid 1px darkgrey;
+  border-bottom:solid 1px darkgrey;
+}
+
+#chatListFrame ul {
+  list-style: none;
+  margin: 1em 3em;
+  padding-left: 1em;
+  border: none;
+}
+
+#chatListFrame li {
+  border-bottom: 1px solid #90bade;
+  overflow: auto;
+  margin: 0;
+}
+
+#chatListFrame li a {
+  padding: 5px 5px 5px 5px;
+  border-left: 10px solid #1958b7;
+  border-right: 10px solid #508fc4;
+  background-color: #2175bc;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+}
+html>body #chatListFrame li a {
+  display:inline-block;
+  width: auto;
+}
+#chatListFrame li label{
+  position:relative;
+  float:right;
+  display:inline-block;
+  width: auto;
+  text-decoration:none;
+  height:2em;
+  font-size:0.6em;
+
+  color:#996633;
+  text-shadow:0px 1px 0px rgba(255,255,255,.4);
+
+  padding:0.05em 0.117em 0.117em 0.317em;
+
+  border-top:1px solid #d99d38;
+  border-right:1px solid #d99d38;
+  border-bottom:1px solid #d99d38;
+
+  -webkit-border-radius:0.25em;
+  -moz-border-radius:0.25em;
+  border-radius:0.25em;
+
+  background-image: -webkit-linear-gradient(top, rgb(254, 218, 113), rgb(254, 186, 71));
+  background-image: -moz-linear-gradient(top, rgb(254, 218, 113), rgb(254, 186, 71));
+  background-image: -o-linear-gradient(top, rgb(254, 218, 113), rgb(254, 186, 71));
+  background-image: -ms-linear-gradient(top, rgb(254, 218, 113), rgb(254, 186, 71));
+  background-image: linear-gradient(top, rgb(254, 218, 113), rgb(254, 186, 71));
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#feda71', EndColorStr='#feba47');
+
+  -webkit-box-shadow:
+          inset 0 1px 0 #faeaba,
+          0 1px 1px rgba(0,0,0,.1);
+  -moz-box-shadow:
+          inset 0 1px 0 #faeaba,
+          0 1px 1px rgba(0,0,0,.1);
+  box-shadow:
+          inset 0 1px 0 #faeaba,
+          0 1px 1px rgba(0,0,0,.1);
+
+  z-index:100;
+}
+#chatListFrame li a:hover {
+  border-left: 10px solid #1c64d1;
+  border-right: 10px solid #5ba3e0;
+  background-color: #2586d7;
+  color: #fff;
+}
+
+#buyList, #sellList{
+  display:inline-block;
+  vertical-align: top; /* here */
+  width: 12em;
+  border-right: 1px solid #000;
+  padding: 0 0 1em 0;
+  margin-bottom: 1em;
+  background-color: #90bade;
+  border-radius: 9px;
+  color: #333;
+}
+
+#listTitle {
+  width: 415px;
+  height: 40px;
+  margin-left : -30px;
+  border-radius: 5px;
+  background-color: white;
+
+}
+/*---------------------------------------*/
+
+/*         추가적으로 view 수정 관련                    */
+div#report_div{
+  font: normal 130% 'Yanone Kaffeesatz', arial, sans-serif;
+  align-content: center;
+  align-items: center;
+  padding-left: 50px;
+}
+
+#semilogo
+{ float: left;
+  padding-left: 10px;
+  font: 400% 'tangerine', arial;
+  color: #FFFFFF;}
+
+a.semititle{
+  font-size: 200%;
+  color: #FFFFFF;
+  padding-left: 30px;
+  font-family: "Nanum Brush Script";
+}
+
+a.auction_logo{
+  font: normal 200% arial, sans-serif, bold;
+  color: #FFFFFF;
+  padding-left: 30px;
+}
+
+.semiimage{
+  align-content: center;
+  align-items: center;
+  padding-left: 80px;
+}
+
+a.semicontent{
+  font: normal 140% 'Yanone Kaffeesatz', arial, sans-serif;
+  color: #FFFFFF;
+  font-family: "Nanum Brush Script";
+}
+
+a.reportcontent{
+  font: normal 140% arial, sans-serif;
+  padding-left: 25px;
+  color: #FFFFFF;
+  font-family: "Nanum Brush Script";
+}
+
+a.warning{
+  font: normal 140% arial, sans-serif;
+  padding-left: 30px;
+  color: red;
+  font-family: '나눔손글씨 펜', NP, Cursive;
+}
+
+.reportimage{
+  align-content: right;
+  align-items: right;
+  padding-left: 400px;
+}
+
+.reportlabel{
+  padding-left: 25px;
+  color: #FFFFFF;
+}
+
+@font-face{font-family:NP;src:url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);src:local(※),url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css) format('woff')}
+.NP{font-family:'나눔손글씨 펜', NP, Cursive}
